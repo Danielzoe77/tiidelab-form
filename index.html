@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-Scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> TIIDElab || Students Registration Form </title>
+    </head>
+<body>
+<div class="container">
+    <div class="middle">
+    <div class="good">
+    <div class="heading">
+        <img src="tid.png" alt="">
+             <div class="read">
+            <h1>Students Registration Form</h1>
+            <p> Fill out the for to apply for the training courses. you can consider your application accepted after you receive a confirmation email </p>
+            </div>
+        </div>
+        <div>
+        <h3> Student Information</h3>
+<form name="signup" onsubmit="myform(event)" class="form" action="index1.html">
+  <span>
+    <input type="text" id="firstname" placeholder="First name" size="27" name="firstname" style="display: inline;" onkeyup = "passName()"  required>
+    <span id="first-error"></span>
+     <!-- <i class="fa fa-check-circle" style="color: aqua;"></i>
+    <i class="fa fa-exclamation-circle"></i> -->
+  </span>
+    <span >
+      <input type="text" id="middlename" placeholder="Middle name" size="27" name="middlename"   onkeyup = "middleName()"required>
+      <span id="middle-error"></span>
+    </span> 
+    <input type="text" id="lastname" placeholder="Last name" name="lastname"  size="27"required>
+    <input type="date" id="dob" name="birthday" placeholder="Date of Birth" style="width: 35%;" size="45"required>
+    <input type="text" id="students" placeholder="Student ID" size="59"required>
+</form>
+</div>
+<div>
+    <h3> Address</h3>
+<form name="signup" class="form">
+<input type="text" id="street" placeholder="Street Address" size="98" required>
+<input type="text"id="city" placeholder="City" size="46">
+<input type="text" id="states" placeholder="State / Province" size="44"required>
+<input type="text" id="country" placeholder="Country" size="46"required>
+<input type="text" id="zipcode" placeholder="ZIP Code" size="44"required>
+</form>
+</div>
+<div>
+    <h3> Contact Information</h3>
+<form name="signup" class="form">
+  <span>
+    <input type="email" id="contact-email" placeholder="Email" size="45" onkeyup = "validateEmail()" required>
+    <span id="email-error"></span>
+  </span>
+    <input type="password" id="password" placeholder="Password" size="45"required>
+</form>
+</div>
+<form >
+    <h3 class="star"> Courses </h3>
+<div class="borderd">
+    <button class="newrc" ><i class="fa fa-plus"></i>Add New Record </button>
+    <!-- <div class="group-btn">
+        <button>Courses <i class="fa fa-caret-down"></i></button>
+        <button>Level <i class="fa fa-caret-down"></i></button>
+        <button>Language <i class="fa fa-caret-down"></i></button>
+        <button>Start Date <i class="fa fa-caret-down"></i></button>
+       
+      </div>   -->
+</div>
+<ul>
+  <li><a href="#">Courses<i class="fa fa-caret-down" onclick="myFunction()"></i></a>
+    <ul class="dropdown">
+      <li><a href="#">Csc101</a></li>
+      <li><a href="#">Dat101</a></li>
+    
+    </ul>
+   </li>
+  <li>
+    <a href="#">Language<i class="fa fa-caret-down" onclick="myFunction()"></i></a> 
+    <ul class="dropdown">
+      <li><a href="#">Html</a></li>
+      <li><a href="#">Javascript</a></li>
+      <!-- <li><a href="#">php</a></li> -->
+      <li><a href="#">css</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#">Levels<i class="fa fa-caret-down" onclick="myFunction()"></i></a> 
+    <ul class="dropdown">
+      <li><a href="#">Beginner</a></li>
+      <li><a href="#">Junior</a></li>
+      <li><a href="#">Senior</a></li>
+      <!-- <li><a href="#">css</a></li> -->
+    </ul>
+  </li>
+  <li><a href="#">Start Date<i class="fa fa-caret-down" onclick="myFunction()"></i></a>
+    <ul class="dropdown">
+      <li><a href="#">January</a></li>
+      <li><a href="#">February</a></li>
+    
+    </ul></li>
+</ul>
+
+<textarea rows="6"  name="comment" class="texta" placeholder="Comment" required >
+</textarea>
+<button type="submit" id="submit"  class="btn-submit" onsubmit="myform(event)" required>Send Request</button>
+<span id="submit-error"></span>
+</form>
+</div>
+</div>
+</div>
+
+
+
+<script>
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const fd = new FormData(form);
+  console.log(fd);
+} )
+
+
+
+</script>
+
+    </body>
+    <script type= "text/javascript" src="script.js"></script>
+    
+    </html>

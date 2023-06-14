@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-Scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title> TIIDElab || Students Registration Form </title>
+    </head>
+    <body style="margin: auto; text-align: center; padding: 20%;" >
+        <form>
+            <div>
+                <input type="text" name="first name" placeholder="first Name" style="margin: 5px; padding: 3px;">
+            </div>
+            <div>
+                <input type="text" name="last name" placeholder="last Name">
+            </div>
+            <div>
+                <button type="submit">submit</button>
+            </div>
+
+
+        </form>
+      
+<script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
+   
+     const obj = Object.fromEntries(fd);
+     console.log(obj);
+
+     const json = JSON.stringify(obj);
+     localStorage.setItem('form', json);
+
+     window.location.href = " confirm.html";
+
+
+
+
+    
+    } )
+    
+    
+    
+    </script>
+    
+
+    
+     
+    </body>
+    </html>
